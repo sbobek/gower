@@ -11,7 +11,7 @@ More details and examples can be found on my personal website here:(https://www.
 
 Core functions are wrote by [Marcelo Beckmann](https://sourceforge.net/projects/gower-distance-4python/files/).
 
-Multiprocessing added by [Szymon Bobek][https://github.com/sbobek]
+Multiprocessing added by [Szymon Bobek](https://github.com/sbobek)
 
 # Examples
 
