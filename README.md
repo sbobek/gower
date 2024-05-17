@@ -1,6 +1,8 @@
 <!-- badges: start -->
-[![PyPI version](https://badge.fury.io/py/gower.svg)](https://pypi.org/project/gower-multiprocessing/)
-[![Downloads](https://pepy.tech/badge/gower/month)](https://pepy.tech/project/gower-multiprocessing/month)
+[![PyPI version](https://badge.fury.io/py/gower-multiprocessing.svg)](https://badge.fury.io/py/gower-multiprocessing)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/gower-multiprocessing)
+
+
 <!-- badges: end -->
 
 # Introduction
