@@ -3,13 +3,14 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gower"
-version = "0.1.2"
+name = "gower-multiprocessing"
+version = "0.2.1"
 authors = [
-  { name="Michael Yan", email="author@example.com" },
-  { name="Dominic D"}
+  { name="Michael Yan" },
+  { name="Dominic D"},
+  { name="Szymon Bobek",email="szymon.bobek@gmail.com"}
 ]
-description = "Python implementation of Gowers distance, pairwise between records in two data sets"
+description = "Python implementation of Gowers distance, pairwise between records in two data sets with multiprocessing support"
 readme = "README.md"
 requires-python = ">=2.7"
 keywords=['gower', 'distance', 'matrix']
@@ -20,4 +21,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/wwwjk366/gower"
+"Homepage" = "https://github.com/sbobek/gower"
