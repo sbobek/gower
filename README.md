@@ -1,7 +1,6 @@
 <!-- badges: start -->
-[![Build Status](https://travis-ci.com/wwwjk366/gower.svg?branch=master)](https://travis-ci.com/wwwjk366/gower)
-[![PyPI version](https://badge.fury.io/py/gower.svg)](https://pypi.org/project/gower/)
-[![Downloads](https://pepy.tech/badge/gower/month)](https://pepy.tech/project/gower/month)
+[![PyPI version](https://badge.fury.io/py/gower.svg)](https://pypi.org/project/gower-multiprocessing/)
+[![Downloads](https://pepy.tech/badge/gower/month)](https://pepy.tech/project/gower-multiprocessing/month)
 <!-- badges: end -->
 
 # Introduction
@@ -12,12 +11,14 @@ More details and examples can be found on my personal website here:(https://www.
 
 Core functions are wrote by [Marcelo Beckmann](https://sourceforge.net/projects/gower-distance-4python/files/).
 
+Multiprocessing added by [Szymon Bobek](https://github.com/sbobek)
+
 # Examples
 
 ## Installation
 
 ```
-pip install gower
+pip install gower-multiprocessing
 ```
 
 ## Generate some data
@@ -25,7 +26,7 @@ pip install gower
 ```python
 import numpy as np
 import pandas as pd
-import gower
+import gower-multiprocessing as gower
 
 Xd=pd.DataFrame({'age':[21,21,19, 30,21,21,19,30,None],
 'gender':['M','M','N','M','F','F','F','F',None],
@@ -81,4 +82,35 @@ gower.gower_topn(Xd.iloc[0:2,:], Xd.iloc[:,], n = 5)
      'values': array([0.16872811, 0.31787416, 0.3590238 , 0.47778758, 0.52622986],
            dtype=float32)}
 
+
+## Performance comparison with single-process version
+
+```
+Single process (DS-size: 10000, time:   15.58 sec.)	█
+Multi process  (DS-size: 10000, time:    2.93 sec.)	
+
+Single process (DS-size: 20000, time:   54.30 sec.)	█████
+Multi process  (DS-size: 20000, time:   11.57 sec.)	█
+
+Single process (DS-size: 30000, time:  119.80 sec.)	███████████
+Multi process  (DS-size: 30000, time:   24.86 sec.)	██
+
+Single process (DS-size: 40000, time:  202.65 sec.)	████████████████████
+Multi process  (DS-size: 40000, time:   41.77 sec.)	████
+
+Single process (DS-size: 50000, time:  318.64 sec.)	███████████████████████████████
+Multi process  (DS-size: 50000, time:   68.36 sec.)	██████
+
+Single process (DS-size: 60000, time:  469.64 sec.)	██████████████████████████████████████████████
+Multi process  (DS-size: 60000, time:   96.24 sec.)	█████████
+
+Single process (DS-size: 70000, time:  653.27 sec.)	█████████████████████████████████████████████████████████████████
+Multi process  (DS-size: 70000, time:  143.31 sec.)	██████████████
+
+Single process (DS-size: 80000, time:  857.04 sec.)	█████████████████████████████████████████████████████████████████████████████████████
+Multi process  (DS-size: 80000, time:  181.60 sec.)	██████████████████
+
+Single process (DS-size: 90000, time: 1129.21 sec.)	████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+Multi process  (DS-size: 90000, time:  252.36 sec.)	█████████████████████████
+```
 
