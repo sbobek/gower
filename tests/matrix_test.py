@@ -2,7 +2,7 @@ import pytest
 
 import numpy as np
 import pandas as pd
-import gower
+import gower_multiprocessing as gower
 import time
 
 def test_answer():
