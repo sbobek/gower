@@ -204,11 +204,11 @@ def gower_get(xi_cat,xi_num,xj_cat,xj_num,feature_weight_cat,
 
     # numerical columns
     abs_delta=np.absolute(xi_num-xj_num)
-    sij_num=np.divide(abs_delta, ranges_of_numeric, out=np.zeros_like(abs_delta), where=ranges_of_numeric!=0)
+    sij_num=np.divide(abs_delta, ranges_of_numeric, out=np.zeros_like(abs_delta), where=ranges_of_numeric!=0,casting='unsafe')
 
     sum_num = np.multiply(feature_weight_num,sij_num).sum(axis=1)
     sums= np.add(sum_cat,sum_num)
-    sum_sij = np.divide(sums,feature_weight_sum)
+    sum_sij = np.divide(sums,feature_weight_sum,casting='unsafe')
     
     return sum_sij
 
